@@ -39,25 +39,41 @@ This repository demonstrates a production-friendly pipeline to fine-tune a Trans
 ├── README.md
 ├── LICENSE
 ├── requirements.txt
+├── environment.yml
+├── configs/                 
+│   ├── default.yaml
+│   ├── scibert.yaml
+│   └── roberta.yaml
 ├── dataset/
-│   ├── download_arxiv.py      # (optional) script to download & preprocess
-│   └── processed/             # final TSV/JSONL splits
+│   ├── README.md
+│   ├── download_arxiv.py
+│   └── processed/
 ├── src/
-│   ├── data.py                # Dataset class, tokenization, collators
-│   ├── model.py               # Model wrapper (HF transformers)
-│   ├── train.py               # Training entrypoint
-│   ├── evaluate.py            # Evaluation entrypoint
-│   ├── utils.py               # helpers: metrics, seed, IO
-│   └── predict.py             # Inference script for single abstract
+│   ├── __init__.py
+│   ├── data.py
+│   ├── model.py
+│   ├── train.py
+│   ├── evaluate.py
+│   ├── utils.py
+│   ├── predict.py
+│   ├── api.py               
+│   └── config.py            
 ├── notebooks/
-│   └── colab_experiment.ipynb # runnable Colab notebook
+│   └── colab_experiment.ipynb
 ├── docker/
 │   ├── Dockerfile
 │   └── entrypoint.sh
 ├── .github/
-│   └── workflows/ci.yml       # lightweight CI tests
-└── saved_models/
-    └── bert-arxiv/            # example checkpoint structure
+│   └── workflows/ci.yml
+├── tests/                   
+│   ├── test_data.py
+│   ├── test_model.py
+│   └── conftest.py
+├── logs/                    
+├── saved_models/
+│   └── bert-arxiv/
+└── docs/                    
+
 ```
 
 ---
